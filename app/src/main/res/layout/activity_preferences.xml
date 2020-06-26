@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.firebaseapp.PreferencesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        style="@style/Toolbar"
+        android:background="@drawable/gradient_toolbar_background"
+        android:elevation="@dimen/elevation">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="?attr/actionBarSize"
+            android:layout_marginRight="?attr/actionBarSize"
+            android:gravity="center"
+            android:text="@string/my_preferences" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/MatchPrefBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tablike_button_border"
+            android:text="@string/match_preferences"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/AppPrefBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/app_preferences"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <include
+        android:visibility="visible"
+
+        layout="@layout/app_prefrenc" />
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/scrollView_preferences"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/layout_preferences_other" />
+    </ScrollView>
+</LinearLayout>

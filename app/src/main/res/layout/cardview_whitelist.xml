@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/whitelist_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_hrizntl_margin"
+        android:paddingTop="8dp"
+        android:paddingEnd="@dimen/activity_hrizntl_margin"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/whitelist_popup_text"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/flames_button_bg"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="goToBatteryOptimisation"
+            android:text="@string/go"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
